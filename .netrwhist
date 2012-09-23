@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/pii/.vim/snippets'
+let g:netrw_dirhist_2='/Users/pii/Dropbox/Development/Projects/cex/web/theme'
+let g:netrw_dirhist_3='/Users/pii/Dropbox/Development/Projects/smartweb-ng/web'
+let g:netrw_dirhist_4='/Users/pii/Dropbox/Development/Projects/smartweb-ng'
+let g:netrw_dirhist_5='/Users/pii/Dropbox/Development/Projects/smartweb-ng/web'
+let g:netrw_dirhist_6='/Users/pii/Dropbox/Development/Projects/glot.io'
+let g:netrw_dirhist_7='/Users/pii/Dropbox/Development/Projects/glot.io/languages'
+let g:netrw_dirhist_8='/private/tmp/launch-CTLDdv'
