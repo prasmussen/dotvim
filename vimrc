@@ -1,3 +1,6 @@
+" Init pathogen
+call pathogen#infect()
+
 " Misc
 set nowrap
 set smartindent
