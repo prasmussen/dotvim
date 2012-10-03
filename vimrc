@@ -26,6 +26,7 @@ imap jj <Esc>
 
 " Indentation overrides
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 
 " Theme
 set background=dark
