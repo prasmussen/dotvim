@@ -10,15 +10,14 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set number
 set encoding=utf-8
 set laststatus=2
 set backspace=2
-set relativenumber
 set showcmd
 set ruler
 set cursorline
 set ttyfast
+set number
 syntax on
 
 " Key mappings
@@ -70,7 +69,14 @@ nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprev<CR>
 
 " YankRing paste
-nnoremap <leader>p :YRGetElem<CR>
+"nnoremap <leader>p :YRGetElem<CR>
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Ack search
 nnoremap <leader>a :Ack
