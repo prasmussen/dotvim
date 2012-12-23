@@ -10,6 +10,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set number
 set encoding=utf-8
 set laststatus=2
 set backspace=2
@@ -17,7 +18,6 @@ set showcmd
 set ruler
 set cursorline
 set ttyfast
-set number
 syntax on
 
 " Key mappings
@@ -31,14 +31,14 @@ nnoremap j gj
 nnoremap k gk
 
 " Disable cursors keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 
 " Disable help key
 inoremap <F1> <ESC>
@@ -67,6 +67,12 @@ nnoremap <leader>B :buffers<CR>:buffer<Space>
 nnoremap <leader>bb :buffer #<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprev<CR>
+
+" Tab movment
+nnoremap <leader>h :tabprev<CR>
+nnoremap <leader>l :tabnext<CR>
+nnoremap <leader>j :tabclose<CR>
+nnoremap <leader>k :tabnew<CR>
 
 " YankRing paste
 nnoremap <leader>p :YRGetElem<CR>
