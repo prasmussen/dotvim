@@ -52,8 +52,9 @@ nnoremap <leader><space> :noh<cr>
 " Strip all trailing whitespace in current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Select pasted text
-nnoremap <leader>v V`]
+" Hotkeys for paste / nopaste
+nnoremap <leader>v :set paste<cr>
+nnoremap <leader>V :set nopaste<cr>
 
 " Window creation / movement
 nnoremap <leader>w <C-w>v<C-w>l
