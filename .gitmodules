@@ -10,3 +10,6 @@
 [submodule "bundle/shakespeare"]
 	path = bundle/shakespeare
 	url = https://github.com/pbrisbin/vim-syntax-shakespeare
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
