@@ -1,0 +1,79 @@
+snippet gen_server
+	-behaviour(gen_server).
+
+	-export([
+		start_link/0,
+		stop/0,
+		init/1,
+		handle_call/3,
+		handle_cast/2,
+		handle_info/2,
+		code_change/3,
+		terminate/2
+	]).
+
+	start_link() ->
+		gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
+
+	init([]) ->
+		{ok, []}.
+
+	stop() ->
+		gen_server:call(?MODULE, stop).
+
+	handle_call(_Event, _From, State) ->
+		{noreply, State}.
+
+	handle_cast(_Event, State) ->
+		{noreply, State}.
+
+	handle_info(_Event, State) ->
+		{noreply, State}.
+
+	code_change(_OldVsc, State, _Extra) ->
+		{ok, State}.
+
+	terminate(Reason, _State) ->
+		Reason.
+
+snippet gen_fsm
+	-behaviour(gen_fsm).
+
+	-export([
+		start_link/0,
+		init/1,
+		handle_event/3,
+		handle_sync_event/4,
+		handle_info/3,
+		code_change/4,
+		terminate/3,
+
+		ready/3
+	]).
+
+	start_link() ->
+		gen_fsm:start_link(?MODULE, [], []).
+
+	init([]) ->
+		{ok, ready, []}.
+
+	ready(_, _From, State) ->
+		{next_state, ready, State}.
+
+	handle_event(_Event, StateName, State) ->
+		{next_state, StateName, State}.
+
+	handle_sync_event(_Event, _From, StateName, State) ->
+		{next_state, StateName, State}.
+
+	handle_info(stop, _StateName, State) ->
+		{stop, normal, State};
+
+	handle_info(_Info, StateName, State) ->
+		{next_state, StateName, State}.
+
+	code_change(_OldVsn, StateName, State, _Extra) ->
+		{ok, StateName, State}.
+
+	terminate(Reason, _StateName, _State) ->
+		Reason.
