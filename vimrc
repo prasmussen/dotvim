@@ -30,6 +30,9 @@ vnoremap <tab> %
 nnoremap j gj
 nnoremap k gk
 
+" Nerdtree
+let g:NERDTreeWinSize = 40
+
 " Disable cursors keys
 "nnoremap <up> <nop>
 "nnoremap <down> <nop>
@@ -104,6 +107,8 @@ set smartcase
 " Indentation overrides
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
+autocmd FileType ex setlocal shiftwidth=2 tabstop=2
+autocmd FileType exs setlocal shiftwidth=2 tabstop=2
 
 " Theme
 set background=dark
