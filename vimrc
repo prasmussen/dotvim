@@ -8,7 +8,12 @@ filetype on
 " Misc
 set nocompatible
 set nowrap
+
 set smartindent
+"set cindent
+"set cinkeys-=0#
+"set indentkeys-=0#
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
